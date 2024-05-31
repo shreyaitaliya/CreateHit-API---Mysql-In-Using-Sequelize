@@ -1,0 +1,132 @@
+{
+    "tables": [
+        {
+            "tableName": "user",
+            "columns": [
+                {
+                    "name": "userid",
+                    "type": "INTEGER",
+                    "primaryKey": true,
+                    "autoIncrement": true
+                },
+                {
+                    "name": "username",
+                    "type": "STRING"
+                },
+                {
+                    "name": "email",
+                    "type": "STRING"
+                }
+            ],
+            "initialData": [
+                {
+                    "username": "user1",
+                    "email": "user1@example.com"
+                },
+                {
+                    "username": "user2",
+                    "email": "user2@example.com"
+                }
+            ]
+        },
+        {
+            "tableName": "category",
+            "columns": [
+                {
+                    "name": "categoryid",
+                    "type": "INTEGER",
+                    "primaryKey": true,
+                    "autoIncrement": true
+                },
+                {
+                    "name": "categoryname",
+                    "type": "STRING"
+                }
+            ],
+            "initialData": [
+                {
+                    "categoryname": "category1"
+                },
+                {
+                    "categoryname": "category2"
+                }
+            ]
+        },
+        {
+            "tableName": "subcategory",
+            "columns": [
+                {
+                    "name": "subcategoryid",
+                    "type": "INTEGER",
+                    "primaryKey": true,
+                    "autoIncrement": true
+                },
+                {
+                    "name": "categoryid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "subcategoryname",
+                    "type": "STRING"
+                }
+            ],
+            "initialData": [
+                {
+                    "categoryid": 1,
+                    "subcategoryname": "subcategory1"
+                },
+                {
+                    "categoryid": 2,
+                    "subcategoryname": "subcategory2"
+                }
+            ]
+        },
+        {
+            "tableName": "product",
+            "columns": [
+                {
+                    "name": "productid",
+                    "type": "INTEGER",
+                    "primaryKey": true,
+                    "autoIncrement": true
+                },
+                {
+                    "name": "categoryid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "subcategoryid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "productname",
+                    "type": "STRING"
+                },
+                {
+                    "name": "price",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "description",
+                    "type": "STRING"
+                }
+            ],
+            "initialData": [
+                {
+                    "categoryid": 1,
+                    "subcategoryid": 1,
+                    "productname": "product1",
+                    "price": 100,
+                    "description": "description1"
+                },
+                {
+                    "categoryid": 2,
+                    "subcategoryid": 2,
+                    "productname": "product2",
+                    "price": 200,
+                    "description": "description2"
+                }
+            ]
+        }
+    ]
+}
